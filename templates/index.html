@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Tyroid Detector</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='diabetes-favicon.ico') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Website Title -->
+    	<div class="container">
+            <h2 class='container-heading'><span class="heading_font">Tyroid Detector</span></h2>
+            <div class='description'>
+    			<p>A Machine Learning Web App, Built with Flask </p>
+    		</div>
+    	</div>
+
+        <!-- Text Area -->
+    	<div class="ml-container">
+    		<form action="{{ url_for('predict') }}" method="POST">
+                <p>Please Answer the following basic question.</p>
+
+                <p><b>1. What is your Gender :</b>
+                <input type="radio" name="Sex" value="1">Male</input>
+                <input type="radio" name="Sex" value="0">Female</input>
+                </p>
+                <p><b>2. Are you on Tyroxine Medication?:</b>
+                <input type="radio" name="on_thyroxine" value="1">Yes</input>
+                <input type="radio" name="on_thyroxine" value="0">No</input>
+                </p>
+                <p><b>3. Are you feeling sick ?:</b>
+                <input type="radio" name="sick" value="1">Yes</input>
+                <input type="radio" name="sick" value="0">No</input>
+                </p>
+                <p><b>4. Are you on antithyroid Medication?:</b>
+                <input type="radio" name="on_antithyroid_medication" value="1">Yes</input>
+                <input type="radio" name="on_antithyroid_medication" value="0">No</input>
+                </p>
+                <p><b>5. Have you did thyroid surgery before?:</b>
+                <input type="radio" name="thyroid_surgery" value="1">Yes</input>
+                <input type="radio" name="thyroid_surgery" value="0">No</input>
+                </p>
+                <p><b>6. Have you did I-131 treatment before?:</b>
+                <input type="radio" name="I131_treatment" value="1">Yes</input>
+                <input type="radio" name="I131_treatment" value="0">No</input>
+                </p>
+                <p><b>7. Have you done lithium treatment?:</b>
+                <input type="radio" name="lithium" value="1">Yes</input>
+                <input type="radio" name="lithium" value="0">No</input>
+                </p>
+                <p><b>8. Did you have a lump in the front of the neck?:</b>
+                <input type="radio" name="goitre" value="1">Yes</input>
+                <input type="radio" name="goitre" value="0">No</input>
+                </p>
+                <p><b>9. Is that tumor?:</b>
+                <input type="radio" name="tumor" value="1">Yes</input>
+                <input type="radio" name="tumor" value="0">No</input>
+                </p>
+                <p><b>10. Do you have hypopituitary?:</b>
+                <input type="radio" name="hypopituitary" value="1">Yes</input>
+                <input type="radio" name="hypopituitary" value="0">No</input>
+                </p>
+                <p><b>11. Have you symptoms like forgetfulness , inattention?:</b>
+                <input type="radio" name="psych" value="1">Yes</input>
+                <input type="radio" name="psych" value="0">No</input>
+                </p>
+
+                <input class="form-input" type="text" name="Age" placeholder="What is your age?"><br>
+                <input class="form-input" type="text" name="T3" placeholder="T3 Level (ng/dL) range 0-8"><br>
+                <input class="form-input" type="text" name="TT4" placeholder="Total thyroxine (TT4) (mcg/dL) eg. 110"><br>
+                <input class="form-input" type="text" name="T4U" placeholder="T4U value  (mIU/L) eg. 0.82"><br>
+                <input class="form-input" type="text" name="FTI" placeholder="FTI Value (μg/dL) eg.130 "><br>
+
+        		<input type="submit" class="my-cta-button" value="Predict">
+        	</form>
+    	</div>
+
+        <!-- Footer -->
+       <div class='footer'>
+           <div class="contact">
+               <a target="_blank" href="https://github.com/Swappy1998"><i class="fab fa-github fa-lg contact-icon"></i></a>
+               <a target="_blank" href="https://www.linkedin.com/in/swapnil-chilimwad-2b230315a/"><i class="fab fa-linkedin fa-lg contact-icon"></i></a>
+           </div>
+           <p class='footer-description'>It's Capstone Project Created by G2 Group </p>
+       </div>
+
+    </body>
+</html>
